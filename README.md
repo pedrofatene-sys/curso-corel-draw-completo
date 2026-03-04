@@ -1,1 +1,0 @@
-# curso-corel-draw-completo
