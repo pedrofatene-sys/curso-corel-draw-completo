@@ -22,7 +22,17 @@ const channels = [
     { id: 'VqrVuo8lIJw', name: 'Como editar textos no Corel Draw' },
     { id: '9sHZyIBH0jc', name: 'Como colocar texto em circulo no Corel Draw' },
     { id: 'EKRScigHYhs', name: 'Criando logo simples de joalheria no Coreldraw - Speed Art' },
-    { id: 'y6FPDoBY2IA', name: 'Como usar o degradê no corel draw - Efeito Gradiente' }   
+    { id: 'y6FPDoBY2IA', name: 'Como usar o degradê no Corel Draw - Efeito Gradiente' },
+    { id: 'osdIcLApM88', name: 'Como usar transparência no CorelDraw' },
+    { id: 'cWUNm-QwQBM', name: 'Como usar sombra projetada no Coreldraw' },
+    { id: 'UivwxhyAUVQ', name: 'Como usar a ferramenta de contorno no CorelDraw' },
+    { id: 'tzK4guc5npg', name: 'Como usar a ferramenta de mistura do Corel Draw' },
+    { id: 'wyIL2JfvTqs', name: 'Como usar a Ferramenta de Distorção no Corel Draw' },
+    { id: 'UEYUcMogTDQ', name: 'Como usar ferramenta envelope no CorelDraw' },
+    { id: 'ZvNIHwzcuB0', name: 'Como usar ferramenta de extrusão no CorelDraw' },
+    { id: '4_HkX_l8XW4', name: 'Como usar ferramenta Bloquear Sombra no Corel Draw' },
+    { id: '7XxWEEoAb8Y', name: 'Como usar a ferramenta Dimensão Paralela no Corel Draw' },
+    { id: 'bCTZALNaJIg', name: 'Como usar ferramenta Conector no Coreldraw' }   
 ];
 
 // Estado atual
