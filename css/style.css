@@ -344,6 +344,63 @@ body {
     font-size: 10px;
     padding: 20px;
 }
+/* Botões */
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-radius:10px;	
+}
+
+
+.button {
+    display: flex;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    backdrop-filter: blur(3px);
+}
+
+.button2 {
+    display: flex;
+    padding: 21px 3px;
+    background: transparent;
+    border: 1px transparent;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    backdrop-filter: blur(3px);
+}
+
+.button:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.button2:hover {
+    background: #fff;
+    color: #000;
+
+}
+
+
+
+.button i {
+    margin-right: 8px;
+}
+
+.button2 i {
+    margin-right: 1px;
+}
 
 /* ====== RESPONSIVIDADE ====== */
 
@@ -522,5 +579,34 @@ body {
     .control-btn.wide {
         width: 45px;
         font-size: 10px;
+    }
+.buttons {
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+   .button {
+        width: 80%;
+        text-align: center;
+    }
+    .button2 {
+        text-align: center;
+        padding: 21px 3px;
+        background: transparent;
+        border: 1px transparent;
+        color: #fff;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+        backdrop-filter: blur(3px);
+    }
+    .button i {
+        margin-right: 8px;
+    }
+
+    .button2 i {
+        margin-right: 1px;
     }
 }
