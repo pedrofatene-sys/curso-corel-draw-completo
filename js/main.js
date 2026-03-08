@@ -10,7 +10,6 @@ const channels = [
     { id: 'v6g2rhP1GFw', name: 'Como salvar um arquivo no Corel Draw' },
     { id: 'd8hFCK3otpY', name: 'Como salvar arquivos no CorelDraw JPG, PNG e PDF' },
     { id: 'NWLqRzMADfQ', name: 'Como exportar vários arquivos de uma vez no CorelDraw - JPG, PNG e PDF' },
-    { id: '7XQ3Qt7EuWg', name: 'Terminal Linux - Referência Global' },
     { id: '0Rdv9NLo6FA', name: 'Como fazer um desenho pixelizado no Corel Draw - Super Mário 8bits' },
     { id: 'nelYhYHiADU', name: 'Como mover, deformar ou inclinar objetos no Corel Draw' }, 
     { id: 'j3q-HJkdFQ0', name: 'Como fazer um desenho no Corel Draw usando apenas retângulos' },
@@ -32,7 +31,20 @@ const channels = [
     { id: 'ZvNIHwzcuB0', name: 'Como usar ferramenta de extrusão no CorelDraw' },
     { id: '4_HkX_l8XW4', name: 'Como usar ferramenta Bloquear Sombra no Corel Draw' },
     { id: '7XxWEEoAb8Y', name: 'Como usar a ferramenta Dimensão Paralela no Corel Draw' },
-    { id: 'bCTZALNaJIg', name: 'Como usar ferramenta Conector no Coreldraw' }   
+    { id: 'bCTZALNaJIg', name: 'Como usar ferramenta Conector no Coreldraw' },
+    { id: 'MNSpJsWaAoY', name: 'Principais Atalhos para o Corel Draw' },
+    { id: 'XVWhhLhKn4M', name: 'Como Aparar ou Soldar elementos no Corel Draw' },
+    { id: 'ocJFhfprBn4', name: 'Como usar régua e linhas guias no Corel Draw' },
+    { id: 'OiWzV5Hsr3o', name: 'Como refazer um logotipo no corel draw' },
+    { id: 'OeLQ9BZjEWE', name: 'Como usar Rastrear Bitmap no Corel Draw' },
+    { id: 'Dxl3pSsWTQY', name: 'Como substituir cor no Corel Draw' },
+    { id: 'NL2qaUNNLH8', name: 'Como converter cores CMYK, RGB, TONS DE CINZA no Corel Draw' },
+    { id: 'L1SyCkxBr-k', name: 'Como tratar fotos no Corel Draw' },
+    { id: 'E-B1O0MSKkI', name: 'Efeitos 3D no Corel Draw' },
+    { id: 'd4o2QZnLo4Q', name: 'Como ganhar dinheiro com o Corel Draw' },
+    { id: 'egsqaWwYacY', name: 'O que é um logotipo, como criar um bom logotipo' },
+    { id: 'lw4FW0z0yuM', name: 'Tipos de logotipo - isotipo, isologo, imagotipo' },
+    { id: 'dJgcZRzKuIw', name: 'O Segredo pra criar bons logotipos' }  
 ];
 
 // Estado atual
