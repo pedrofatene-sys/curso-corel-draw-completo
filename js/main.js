@@ -44,7 +44,29 @@ const channels = [
     { id: 'd4o2QZnLo4Q', name: 'Como ganhar dinheiro com o Corel Draw' },
     { id: 'egsqaWwYacY', name: 'O que é um logotipo, como criar um bom logotipo' },
     { id: 'lw4FW0z0yuM', name: 'Tipos de logotipo - isotipo, isologo, imagotipo' },
-    { id: 'dJgcZRzKuIw', name: 'O Segredo pra criar bons logotipos' }  
+    { id: 'dJgcZRzKuIw', name: 'O Segredo pra criar bons logotipos' },
+    { id: 'oc0O_saHIlk', name: 'Como fazer um logotipo no Corel Draw' },
+    { id: 'erbokUs7fqE', name: 'Como criar um logotipo no Corel Draw - (passo a passo)' },
+    { id: 'PljyYlTQptg', name: 'Como criar um logotipo no Corel Draw - (AULA COMPLETA)' },
+    { id: 'ELXRIvLTKto', name: 'Como criar um logotipo no Corel Draw' },
+    { id: '1UJPMZQL9-g', name: 'Como criar um logotipo no Corel draw (Passo a passo)' },
+    { id: 'PAi1hmVAgP8', name: 'Como criar um manual de Identidade Visual - Manual de marca ou logotipo' },
+    { id: 'CcaPbN7exCk', name: 'Como Fazer um Cartão de Visitas no Corel Draw' },
+    { id: 'axP9I23OBrE', name: 'Como criar um Cartão de Visitas no Corel Draw' },
+    { id: 'xkgpMcxVZU8', name: 'Como fazer um poster impresso em partes no Corel DRAW' },
+    { id: 'nRhf6ZOyx5A', name: 'Como encontrar objetos invisíveis no Corel' },
+    { id: 'tAQe79Zv-hs', name: 'O Corel não instala no meu computador! Como resolver?' },
+    { id: '4m_iEgoS7A0', name: 'Corel deixa a foto em baixa qualidade? Entenda o DPI no corel!' },
+    { id: 'dE14Gh2zVuM', name: 'Como fazer um logo com grid no Corel Draw' },
+    { id: 'jB8ASmck1As', name: 'Como fazer cartão com verniz localizado no Corel Draw' },
+    { id: 'CnvLqQiUiCk', name: 'Como fazer um mini cartão de visitas no Corel' },
+    { id: 'd-slu_yzsFE', name: 'Como montar um cartão de visitas duplo no Corel Draw' },
+    { id: 'LXw1ldFq39g', name: 'Como remover a página do corel remover borda e a sombra da página' },
+    { id: 'MM4s_yedzwA', name: 'Como localizar e substituir cores no Corel Draw' },
+    { id: '4LloRkXtDlg', name: 'Como arredondar cantos de qualquer objeto no CorelDraw?' },
+    { id: 'bZ1i6T8f-nQ', name: 'Como usar a impressão mesclada no corel - Criar números sequenciais automaticamente' },
+    { id: '92GVLa9KzSI', name: 'Usar a impressão mesclada no corel - Números sequênciais automaticamente para notas, talões e rifas' },
+    { id: '-GCdqCeD658', name: 'Como usar a impressão mesclada no Corel pra colocar nomes em certificados automaticamente' } 
 ];
 
 // Estado atual
