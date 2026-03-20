@@ -87,7 +87,32 @@ const channels = [
     { id: 'EIbbAETFQpE', name: 'Como redesenhar fontes no Corel de modo fácil e rápido' },
     { id: 'ztvY3S6RA5Q', name: 'Como descobrir a fonte de um logotipo usando a ferramenta WhatTheFont de modo fácil' },
     { id: '6u2g9kYPTVg', name: 'Como desenhar símbolos usando formas simples no Corel Draw de modo fácil' },
-];
+    { id: 'pnKdg77B_8E', name: 'Redesenhar um logotipo no Corel Draw de modo fácil' },
+    { id: 'nRKbjWdgXe0', name: 'Como redesenhar letras e fontes no Corel Draw de modo fácil' },
+    { id: '3JRtdFbanRo', name: 'Pra que serve o painel de objetos do Corel Draw como usar de modo fácil' },
+    { id: 'Xsb8LfbmAEs', name: 'Como fazer thumbnail - capa para youtube - no Corel de um modo fácil' },
+    { id: 'Ij5b9T7_nu8', name: 'Como criar um Jornal estilo Classificados no Corel Draw e ganhar dinheiro de modo fácil' },
+    { id: 'cqW1hBvtXNc', name: 'Como ajustar objetos ao caminho no Corel Draw de modo fácil' },
+    { id: 'lrnTsf42oSw', name: 'Como usar a paleta de cores do Corel Draw do jeito certo' },
+    { id: 'RhUshi9ihPA', name: 'Como copiar o degrade de uma imagem no Corel Draw de modo fácil' },
+    { id: '2gZm5kiV-vE', name: 'Como usar cores com código no Corel de modo fácil' },
+    { id: 'y8NPzyRb85w', name: 'Como usar o preenchimento gradiente de modo profissional no Corel Draw' },
+    { id: 'pUuE9eJzSyw', name: 'Como criar estampas com padrão de imagem no Corel Draw' },
+    { id: 'YKUuGHzST1g', name: 'Como criar padrão de estampa com vetor no Corel Draw' },
+    { id: 'COkOfTh846c', name: 'Como importar arquivos de Illustrator e EPS para o Corel Draw' },
+    { id: '9DVEREDtzRk', name: 'Como fazer um livro de desenhos para colorir no Corel Draw e ganhar dinheiro' },
+    { id: 'tDEM9jkQgYE', name: 'Como fazer um livro de história infantil no Corel e ganhar dinheiro' },
+    { id: 'Ta_sFXYWpaE', name: 'Como fazer desenho pixelizados no Corel ganhar dinheiro com pixel art' },
+    { id: 'v5zXQXKpwt8', name: 'Como ganhar dinheiro fazendo molduras personalizadas para o Canva no Corel Draw' },
+    { id: 'I1EC-F5Q70g', name: 'Como Recortar uma imagem no Corel Draw' },
+    { id: 'tUIBPHfxQic', name: 'Como usar a máscara de bitmap do Corel para remover o fundo de uma imagem' },
+    { id: 'hnSaStr07sQ', name: 'Como remover o fundo de uma foto usando uma gambiarra no Corel Draw' },
+    { id: 'bVMWdWdKmmU', name: 'Como mudar a cor de fundo da página no Corel de modo fácil' },
+    { id: '_iKd8i9Y_Mo', name: 'Ferramenta sumiu da barra no Corel! Como arrumar?' },
+    { id: 'saKJKuQOoMQ', name: 'Pack de gradientes grátis pra usar no Corel. Gradientes de ouro, prata e cobre!' },
+    { id: 'lYxoqhEiwB4', name: 'Como fazer efeito de imagem saindo de objeto no Corel Draw' },
+    { id: 'jNUUhIAONSM', name: 'Como separar partes de um objeto único no Corel Draw de modo fácil' }
+ ];
 
 // Estado atual
 let currentChannel = 0;
