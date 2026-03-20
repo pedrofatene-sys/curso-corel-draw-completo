@@ -66,7 +66,27 @@ const channels = [
     { id: '4LloRkXtDlg', name: 'Como arredondar cantos de qualquer objeto no CorelDraw?' },
     { id: 'bZ1i6T8f-nQ', name: 'Como usar a impressão mesclada no corel - Criar números sequenciais automaticamente' },
     { id: '92GVLa9KzSI', name: 'Usar a impressão mesclada no corel - Números sequênciais automaticamente para notas, talões e rifas' },
-    { id: '-GCdqCeD658', name: 'Como usar a impressão mesclada no Corel pra colocar nomes em certificados automaticamente' } 
+    { id: '-GCdqCeD658', name: 'Como usar a impressão mesclada no Corel pra colocar nomes em certificados automaticamente' },
+    { id: '92GVLa9KzSI', name: 'Usar a impressão mesclada no corel - Números sequênciais automaticamente para notas, talões e rifas' },
+    { id: '-GCdqCeD658', name: 'Como usar a impressão mesclada no Corel pra colocar nomes em certificados automaticamente' },
+    { id: 'iyE6wYQA9e0', name: 'Como fazer um desenho simples no Corel Draw de modo fácil' },
+    { id: 'rPXVp3SJ-vQ', name: 'Como fazer um desenho simples no Corel Draw de modo fácil - Parte 2' },
+    { id: 'eTV1_1tmrYI', name: 'Como fazer um desenho com pintura gradiente no Corel Draw de modo fácil - PARTE 3' },
+    { id: 'Ol1AYfUrep0', name: 'Como fazer um desenho com efeito 3D no Corel Draw de modo fácil - PARTE 4' },
+    { id: 'RKuiSQwjalo', name: 'Como ganhar dinheiro com seus desenhos feitos no Corel Draw de modo fácil' },
+    { id: 'QGnisk072IQ', name: 'Como imprimir várias etiquetas numeradas em sequência em uma mesma página do Corel Draw' },
+    { id: 'rQP2xfZCjP0', name: 'Como deixar o Corel com tema escuro igual o illustrator de modo fácil' },
+    { id: 'TUFGa_2Yjhk', name: 'Como mudar a distância de deslocamento das setas do teclado no Corel de modo fácil' },
+    { id: '_pjH1CNUt-g', name: 'Como usar uma mesa digitalizadora no Corel de modo fácil - Wacom One' },
+    { id: 'AcZmSHIJgzw', name: 'Como configurar pressão de mesa digitalizadora no Corel de modo fácil - wacon one' },
+    { id: 'b_m9I4I2lL4', name: 'Como usar as ferramentas de alinhamento e distribuição no Corel de modo fácil' },
+    { id: 'Q_aI0D5Gqro', name: 'Como fazer um desenho e pintar no Corel Draw de modo fácil' },
+    { id: 'By9n6mjdV3w', name: 'Como usar a ferramenta de transformar para criar cópias perfeitas no Corel' },
+    { id: '8Mk2K9FC35c', name: 'Como fazer um desenho e colorir no Corel Draw de modo fácil usando a mídia artística' },
+    { id: 'XYLni79Z7v0', name: 'Crie 100 POSTAGENS para INSTAGRAM em Minutos com Corel Draw e ChatGPT' },
+    { id: 'EIbbAETFQpE', name: 'Como redesenhar fontes no Corel de modo fácil e rápido' },
+    { id: 'ztvY3S6RA5Q', name: 'Como descobrir a fonte de um logotipo usando a ferramenta WhatTheFont de modo fácil' },
+    { id: '6u2g9kYPTVg', name: 'Como desenhar símbolos usando formas simples no Corel Draw de modo fácil' },
 ];
 
 // Estado atual
