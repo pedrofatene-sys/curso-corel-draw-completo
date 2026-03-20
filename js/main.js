@@ -116,7 +116,7 @@ const channels = [
     { id: 'kQFgcVupePw', name: 'Como mudar as cores de uma camiseta no Corel estilo Mockup de camiseta personalizado' },
     { id: 'Ml864OGgleI', name: 'Como desenhar uma flor para recorte no Corel de modo fácil' },
     { id: 'RoxiZkG1jW8', name: 'Como girar elementos no corel de modo fácil e rápido' },
-    { id: 'FWHSCP7dpvQ', name: 'Como Criar Canecas Personalizadas com Corel' }6
+    { id: 'FWHSCP7dpvQ', name: 'Como Criar Canecas Personalizadas com Corel' }
  ];
 
 // Estado atual
