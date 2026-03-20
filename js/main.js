@@ -111,7 +111,12 @@ const channels = [
     { id: '_iKd8i9Y_Mo', name: 'Ferramenta sumiu da barra no Corel! Como arrumar?' },
     { id: 'saKJKuQOoMQ', name: 'Pack de gradientes grátis pra usar no Corel. Gradientes de ouro, prata e cobre!' },
     { id: 'lYxoqhEiwB4', name: 'Como fazer efeito de imagem saindo de objeto no Corel Draw' },
-    { id: 'jNUUhIAONSM', name: 'Como separar partes de um objeto único no Corel Draw de modo fácil' }
+    { id: 'jNUUhIAONSM', name: 'Como separar partes de um objeto único no Corel Draw de modo fácil' },
+    { id: 'XMj3erKOZVE', name: 'Como vetorizar esboço de logotipo no Corel de modo fácil' },
+    { id: 'kQFgcVupePw', name: 'Como mudar as cores de uma camiseta no Corel estilo Mockup de camiseta personalizado' },
+    { id: 'Ml864OGgleI', name: 'Como desenhar uma flor para recorte no Corel de modo fácil' },
+    { id: 'RoxiZkG1jW8', name: 'Como girar elementos no corel de modo fácil e rápido' },
+    { id: 'FWHSCP7dpvQ', name: 'Como Criar Canecas Personalizadas com Corel' }6
  ];
 
 // Estado atual
