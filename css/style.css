@@ -4,31 +4,64 @@
     box-sizing: border-box;
 }
 
+:root {
+    --netflix-red: #e50914;
+    --netflix-red-hover: #f6121d;
+    --netflix-black: #141414;
+    --netflix-black-soft: #181818;
+    --netflix-panel: #1f1f1f;
+    --netflix-panel-2: #232323;
+    --netflix-border: rgba(255, 255, 255, 0.08);
+    --netflix-text: #ffffff;
+    --netflix-text-soft: #b3b3b3;
+    --netflix-text-muted: #808080;
+    --netflix-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
 body {
-    font-family: 'Press Start 2P', cursive;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--netflix-text);
+    background:
+        radial-gradient(circle at top, rgba(229, 9, 20, 0.18), transparent 35%),
+        linear-gradient(180deg, #0b0b0b 0%, #141414 32%, #111111 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 32px 20px 48px;
     overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.55) 100%);
+    pointer-events: none;
+    z-index: -3;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 45%, rgba(0, 0, 0, 0.5) 100%);
+    pointer-events: none;
+    z-index: -2;
 }
 
 .background-pattern {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
+    inset: 0;
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.55)),
         repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 2px,
-            rgba(255, 255, 255, 0.03) 2px,
-            rgba(255, 255, 255, 0.03) 4px
+            90deg,
+            rgba(255, 255, 255, 0.015) 0,
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px,
+            transparent 120px
         );
     pointer-events: none;
     z-index: -1;
@@ -38,93 +71,79 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1380px;
 }
 
-/* ====== TV SET ====== */
+/* ====== PLAYER PRINCIPAL ====== */
 .tv-set {
     position: relative;
-    filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.6));
+    width: 100%;
+    max-width: 1180px;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.45));
 }
 
-/* Antena */
 .antenna {
-    position: absolute;
-    top: -80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 80px;
-    z-index: -1;
+    display: none;
 }
 
-.antenna-left,
-.antenna-right {
-    position: absolute;
-    width: 3px;
-    height: 80px;
-    background: linear-gradient(to bottom, #666, #999);
-    border-radius: 2px;
-}
-
-.antenna-left {
-    left: 20px;
-    transform: rotate(-25deg);
-    transform-origin: bottom;
-}
-
-.antenna-right {
-    right: 20px;
-    transform: rotate(25deg);
-    transform-origin: bottom;
-}
-
-/* Corpo da TV */
 .tv-body {
-    background: linear-gradient(145deg, #8b7355, #6b5644);
-    border-radius: 30px 30px 10px 10px;
-    padding: 40px;
-    box-shadow: 
-        inset 0 -10px 20px rgba(0, 0, 0, 0.3),
-        inset 0 10px 20px rgba(255, 255, 255, 0.1),
-        0 30px 60px rgba(0, 0, 0, 0.5);
-    border: 8px solid #5a4433;
     position: relative;
-    max-width: 900px;
+    background:
+        linear-gradient(180deg, rgba(35, 35, 35, 0.96) 0%, rgba(20, 20, 20, 0.98) 100%);
+    border: 1px solid var(--netflix-border);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: var(--netflix-shadow);
+    max-width: 100%;
+    overflow: hidden;
 }
 
-/* Frame da Tela */
+.tv-body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(229, 9, 20, 0.16), transparent 28%, transparent 72%, rgba(229, 9, 20, 0.08));
+    pointer-events: none;
+}
+
 .screen-frame {
-    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 
-        inset 0 5px 15px rgba(0, 0, 0, 0.8),
-        0 5px 15px rgba(0, 0, 0, 0.3);
-    margin-bottom: 25px;
+    position: relative;
+    background: #000;
+    padding: 0;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    overflow: hidden;
+    margin-bottom: 22px;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.03),
+        0 24px 45px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(229, 9, 20, 0.08);
 }
 
 .screen-glass {
     position: relative;
-    border-radius: 15px;
+    border-radius: 18px;
     overflow: hidden;
     background: #000;
     aspect-ratio: 16 / 9;
 }
 
+.screen-glass::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    pointer-events: none;
+}
+
 .screen-reflection {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.1) 0%,
-        transparent 100%
-    );
+    inset: 0;
+    background:
+        linear-gradient(115deg, rgba(255, 255, 255, 0.14) 0%, transparent 22%, transparent 60%, rgba(255, 255, 255, 0.05) 100%);
     pointer-events: none;
     z-index: 2;
 }
@@ -133,6 +152,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+    background: #000;
 }
 
 #youtubePlayer {
@@ -141,259 +161,291 @@ body {
     border: none;
 }
 
-/* Scanlines - efeito de TV antiga */
 .scanlines {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.15) 0px,
-        transparent 1px,
-        transparent 2px,
-        rgba(0, 0, 0, 0.15) 3px
-    );
+    inset: 0;
+    background:
+        linear-gradient(to top, rgba(0, 0, 0, 0.28), transparent 22%),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.02) 0px,
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+    mix-blend-mode: screen;
+    opacity: 0.22;
     pointer-events: none;
     z-index: 1;
-    opacity: 0.3;
 }
 
-/* Display do Canal */
+/* ====== CABEÇALHO DO CONTEÚDO ====== */
 .channel-display {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-    border-radius: 10px;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.channel-display::after {
+    content: "Assista agora";
+    color: var(--netflix-text-soft);
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
 .led-light {
     width: 12px;
     height: 12px;
-    background: #ff3333;
+    background: var(--netflix-red);
     border-radius: 50%;
-    box-shadow: 
-        0 0 10px #ff3333,
-        0 0 20px #ff3333,
-        inset 0 -2px 5px rgba(0, 0, 0, 0.3);
-    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 0 0 4px rgba(229, 9, 20, 0.14), 0 0 18px rgba(229, 9, 20, 0.8);
+    animation: pulse 1.8s ease-in-out infinite;
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.6; }
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.9);
+        opacity: 0.65;
+    }
 }
 
 .channel-info {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #00ff00;
-    font-size: 12px;
-    text-shadow: 0 0 10px #00ff00;
+    align-items: baseline;
+    gap: 12px;
+    color: var(--netflix-text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    flex: 1;
+}
+
+.channel-label {
+    color: var(--netflix-text-soft);
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
 }
 
 .channel-number {
-    font-size: 20px;
-    font-weight: bold;
+    color: var(--netflix-text);
+    font-size: 1.55rem;
+    font-weight: 700;
 }
 
-/* Painel de Controle */
+/* ====== CONTROLES ====== */
 .control-panel {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    gap: 16px;
+    justify-content: flex-start;
     padding: 20px;
-    background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
-    border-radius: 15px;
-    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .control-group {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 10px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .control-label {
-    font-size: 8px;
-    color: #999;
-    letter-spacing: 1px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--netflix-text-muted);
+    margin-right: 2px;
 }
 
 .control-btn {
-    width: 50px;
-    height: 50px;
+    min-width: 48px;
+    height: 46px;
+    padding: 0 16px;
     border: none;
-    border-radius: 50%;
-    background: linear-gradient(145deg, #4a4a4a, #2a2a2a);
-    color: #fff;
-    font-size: 16px;
+    border-radius: 10px;
+    background: #2f2f2f;
+    color: var(--netflix-text);
+    font-size: 0.98rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: 
-        0 5px 10px rgba(0, 0, 0, 0.3),
-        inset 0 1px 2px rgba(255, 255, 255, 0.2);
-    font-family: Arial, sans-serif;
+    transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
+    font-family: inherit;
 }
 
 .control-btn.wide {
-    width: 60px;
-    font-size: 14px;
+    min-width: 76px;
 }
 
 .control-btn:hover {
-    background: linear-gradient(145deg, #5a5a5a, #3a3a3a);
+    background: var(--netflix-red);
     transform: translateY(-2px);
-    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 14px 28px rgba(229, 9, 20, 0.28);
 }
 
 .control-btn:active {
     transform: translateY(0);
-    box-shadow: 
-        0 2px 5px rgba(0, 0, 0, 0.3),
-        inset 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Marca da TV */
+/* ====== MARCA ====== */
 .tv-brand {
-    text-align: center;
-    margin-top: 15px;
-    color: #d4af37;
-    font-size: 14px;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 18px;
+    color: var(--netflix-red);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+    text-align: left;
+    text-transform: uppercase;
 }
 
-/* Suporte da TV */
 .tv-stand {
-    width: 200px;
-    height: 15px;
-    background: linear-gradient(145deg, #5a4433, #4a3323);
-    border-radius: 0 0 10px 10px;
-    margin: 0 auto;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    display: none;
 }
 
-/* Lista de Canais */
+/* ====== LISTA DE AULAS ====== */
 .channel-list {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
     width: 100%;
-    max-width: 900px;
+    max-width: 1180px;
+    padding: 24px;
+    background: linear-gradient(180deg, rgba(24, 24, 24, 0.94), rgba(17, 17, 17, 0.98));
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
 .channel-list h3 {
-    color: #fff;
-    font-size: 14px;
-    margin-bottom: 15px;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--netflix-text);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-align: left;
 }
 
 #channelListContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
 }
 
 .channel-item {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    border-radius: 8px;
-    border: 2px solid transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 124px;
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
     cursor: pointer;
-    transition: all 0.3s;
-    color: #fff;
-    font-size: 10px;
+    transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+    color: var(--netflix-text);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+        linear-gradient(135deg, rgba(229, 9, 20, 0.18), rgba(0, 0, 0, 0) 55%);
+    overflow: hidden;
+}
+
+.channel-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.45));
+    pointer-events: none;
+}
+
+.channel-item > * {
+    position: relative;
+    z-index: 1;
 }
 
 .channel-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.28);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
+        linear-gradient(135deg, rgba(229, 9, 20, 0.28), rgba(0, 0, 0, 0) 58%);
 }
 
 .channel-item.active {
-    background: rgba(212, 175, 55, 0.3);
-    border-color: #d4af37;
+    border-color: rgba(229, 9, 20, 0.88);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025)),
+        linear-gradient(135deg, rgba(229, 9, 20, 0.45), rgba(40, 0, 0, 0.2) 60%);
+    box-shadow: 0 16px 32px rgba(229, 9, 20, 0.18);
 }
 
 .channel-item .channel-num {
-    display: block;
-    font-size: 12px;
-    color: #d4af37;
-    margin-bottom: 5px;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 6px 10px;
+    margin-bottom: 12px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 700;
 }
 
-/* Rodapé */
-.footer {
-    margin-top: 40px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 10px;
-    padding: 20px;
+.channel-item span:last-child {
+    font-size: 1rem;
+    line-height: 1.45;
+    color: var(--netflix-text);
 }
-/* Botões */
 
+/* ====== BOTÃO EXTERNO ====== */
 .buttons {
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    border-radius:10px;	
+    justify-content: center;
+    width: 100%;
 }
-
 
 .button {
-    display: flex;
-    padding: 12px 20px;
-    margin: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    margin: 10px 0 0;
+    background: var(--netflix-red);
     color: #fff;
+    border: none;
     border-radius: 10px;
     text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-    backdrop-filter: blur(3px);
-}
-
-.button2 {
-    display: flex;
-    padding: 21px 3px;
-    background: transparent;
-    border: 1px transparent;
-    color: #fff;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-    backdrop-filter: blur(3px);
+    transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 14px 30px rgba(229, 9, 20, 0.25);
 }
 
 .button:hover {
-    background: #fff;
-    color: #000;
-    transform: scale(1.05);
+    background: var(--netflix-red-hover);
+    transform: translateY(-2px);
 }
 
-.button2:hover {
-    background: #fff;
-    color: #000;
-
+.button2 {
+    display: none;
 }
-
-
 
 .button i {
     margin-right: 8px;
@@ -403,211 +455,159 @@ body {
     margin-right: 1px;
 }
 
-/* ====== RESPONSIVIDADE ====== */
+/* ====== RODAPÉ ====== */
+.footer {
+    margin-top: 28px;
+    text-align: center;
+    color: var(--netflix-text-soft);
+    font-size: 0.95rem;
+    padding: 8px 20px 0;
+}
 
-/* Tablets */
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 1024px) {
+    .tv-body,
+    .channel-list {
+        padding: 20px;
+    }
+
+    .channel-display {
+        flex-wrap: wrap;
+    }
+
+    .channel-display::after {
+        width: 100%;
+        padding-left: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     body {
-        padding: 15px;
+        padding: 20px 14px 36px;
     }
-    
-    .tv-body {
-        padding: 30px 20px;
-    }
-    
-    .antenna {
-        top: -60px;
-        width: 80px;
-        height: 60px;
-    }
-    
-    .antenna-left,
-    .antenna-right {
-        height: 60px;
-    }
-    
-    .screen-frame {
-        padding: 15px;
-    }
-    
-    .control-panel {
-        padding: 15px;
-        gap: 15px;
-    }
-    
-    .control-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 14px;
-    }
-    
-    .control-btn.wide {
-        width: 55px;
-    }
-    
-    .tv-brand {
-        font-size: 12px;
-    }
-    
-    .channel-list h3 {
-        font-size: 12px;
-    }
-    
-    #channelListContainer {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-    
-    .channel-item {
-        font-size: 9px;
-        padding: 12px;
-    }
-}
 
-/* Smartphones */
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    
     .container {
-        gap: 20px;
+        gap: 22px;
     }
-    
-    .tv-body {
-        padding: 20px 15px;
-        border-width: 5px;
-    }
-    
-    .antenna {
-        top: -40px;
-        width: 60px;
-        height: 40px;
-    }
-    
-    .antenna-left,
-    .antenna-right {
-        height: 40px;
-        width: 2px;
-    }
-    
-    .screen-frame {
-        padding: 10px;
-    }
-    
-    .channel-display {
-        padding: 8px 15px;
-        gap: 10px;
-    }
-    
-    .channel-info {
-        font-size: 10px;
-    }
-    
-    .channel-number {
-        font-size: 16px;
-    }
-    
-    .control-panel {
-        padding: 12px;
-        gap: 12px;
-    }
-    
-    .control-label {
-        font-size: 7px;
-    }
-    
-    .control-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 12px;
-    }
-    
-    .control-btn.wide {
-        width: 50px;
-        font-size: 11px;
-    }
-    
-    .tv-brand {
-        font-size: 10px;
-        letter-spacing: 2px;
-    }
-    
-    .tv-stand {
-        width: 150px;
-        height: 12px;
-    }
-    
+
+    .tv-body,
     .channel-list {
-        padding: 15px;
+        border-radius: 18px;
+        padding: 16px;
     }
-    
-    .channel-list h3 {
-        font-size: 11px;
+
+    .screen-frame,
+    .screen-glass,
+    .screen-glass::after {
+        border-radius: 14px;
     }
-    
-    #channelListContainer {
-        grid-template-columns: 1fr;
+
+    .channel-display {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .channel-display::after {
+        padding-left: 0;
+        font-size: 0.8rem;
+    }
+
+    .channel-info {
+        flex-wrap: wrap;
         gap: 8px;
     }
-    
+
+    .channel-number {
+        font-size: 1.3rem;
+    }
+
+    .control-panel {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .control-group {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .control-btn {
+        flex: 1 1 auto;
+        min-width: 44px;
+    }
+
+    .tv-brand {
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+    }
+
+    .channel-list h3 {
+        font-size: 1.15rem;
+    }
+
+    #channelListContainer {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+    }
+
     .channel-item {
-        font-size: 8px;
-        padding: 10px;
+        min-height: 110px;
+        padding: 14px;
     }
-    
-    .channel-item .channel-num {
-        font-size: 10px;
+
+    .channel-item span:last-child {
+        font-size: 0.94rem;
     }
-    
-    .footer {
-        font-size: 8px;
-        margin-top: 20px;
+
+    .button {
+        width: 100%;
+        max-width: 420px;
     }
 }
 
-/* Telas muito pequenas */
+@media (max-width: 480px) {
+    .channel-display {
+        align-items: flex-start;
+    }
+
+    .channel-list h3 {
+        font-size: 1rem;
+    }
+
+    #channelListContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .channel-item {
+        min-height: 96px;
+    }
+
+    .channel-item .channel-num {
+        font-size: 0.76rem;
+    }
+
+    .channel-item span:last-child {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        font-size: 0.88rem;
+    }
+}
+
 @media (max-width: 320px) {
-    .tv-body {
-        padding: 15px 10px;
+    .control-group {
+        padding: 10px;
     }
-    
-    .control-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 11px;
-    }
-    
+
+    .control-btn,
     .control-btn.wide {
-        width: 45px;
-        font-size: 10px;
-    }
-.buttons {
-        flex-direction: row;
-        align-items: center;
+        min-width: 100%;
     }
 
-
-   .button {
-        width: 80%;
-        text-align: center;
-    }
-    .button2 {
-        text-align: center;
-        padding: 21px 3px;
-        background: transparent;
-        border: 1px transparent;
-        color: #fff;
-        border-radius: 50%;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        font-size: 0.95rem;
-        backdrop-filter: blur(3px);
-    }
-    .button i {
-        margin-right: 8px;
-    }
-
-    .button2 i {
-        margin-right: 1px;
+    .button {
+        padding: 12px 18px;
+        font-size: 0.92rem;
     }
 }
